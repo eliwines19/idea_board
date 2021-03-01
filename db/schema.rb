@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_151405) do
+ActiveRecord::Schema.define(version: 2021_03_01_195641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: :cascade do |t|
+    t.string "title"
+    t.integer "lanscaping_id"
+    t.integer "hardscaping_id"
+    t.integer "custom_pool_id"
+    t.integer "artisan_masonry_id"
+    t.integer "carpentry_id"
+    t.integer "outdoor_lighting_id"
+    t.integer "outdoor_kitchen_id"
+    t.integer "outdoor_fireplace_id"
+    t.integer "water_feature_id"
+    t.integer "fire_pit_id"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_boards_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
