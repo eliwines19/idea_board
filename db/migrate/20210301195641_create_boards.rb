@@ -2,7 +2,7 @@ class CreateBoards < ActiveRecord::Migration[6.0]
   def change
     create_table :boards do |t|
       t.string :title
-      t.integer :lanscaping_id
+      t.integer :landscaping_id
       t.integer :hardscaping_id
       t.integer :custom_pool_id
       t.integer :artisan_masonry_id

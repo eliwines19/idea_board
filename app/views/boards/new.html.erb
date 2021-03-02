@@ -1,0 +1,728 @@
+<div class="container">
+
+    <h1>Board Selection</h1>
+
+    <h4>
+        Here you will select your favorite image for each category,
+        place the number of your favorite image in the box below and submit when completed.
+    </h4>
+
+</div>
+
+<%= form_for @board, :html => {:class => "board-form"} do |f| %>
+
+    <%= f.label :title, "Give your Board a Title"%><br>
+    <%= f.text_field :title%><br>
+
+    <%= f.label :landscaping_id, "Choose your favorite landscape" %>
+    <div class="container">
+        <div id="landscaping-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#landscaping-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="1"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="2"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="3"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="4"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="5"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="6"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="7"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="8"></li>
+                <li data-target="#landscaping-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Landscaping: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Landscaping: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("landscaping/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#landscaping-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#landscaping-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :landscaping_id %>
+    <%= f.number_field :landscaping_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :hardscaping_id, "Choose your favorite hardscape" %>
+    <div class="container">
+        <div id="hardscaping-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#hardscaping-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="1"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="2"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="3"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="4"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="5"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="6"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="7"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="8"></li>
+                <li data-target="#hardscaping-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Hardscaping: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Hardscaping: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("hardscaping/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#hardscaping-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#hardscaping-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :hardscaping_id %>
+    <%= f.number_field :hardscaping_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :custom_pool_id, "Choose your favorite custom pool" %>
+    <div class="container">
+        <div id="pool-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#pool-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#pool-carousel" data-slide-to="1"></li>
+                <li data-target="#pool-carousel" data-slide-to="2"></li>
+                <li data-target="#pool-carousel" data-slide-to="3"></li>
+                <li data-target="#pool-carousel" data-slide-to="4"></li>
+                <li data-target="#pool-carousel" data-slide-to="5"></li>
+                <li data-target="#pool-carousel" data-slide-to="6"></li>
+                <li data-target="#pool-carousel" data-slide-to="7"></li>
+                <li data-target="#pool-carousel" data-slide-to="8"></li>
+                <li data-target="#pool-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Custom Pool: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Custom Pool: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("custom_pool/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#pool-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#pool-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :custom_pool_id %>
+    <%= f.number_field :custom_pool_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :artisan_masonry_id, "Choose your favorite Masonry Work" %>
+    <div class="container">
+        <div id="masonry-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#masonry-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#masonry-carousel" data-slide-to="1"></li>
+                <li data-target="#masonry-carousel" data-slide-to="2"></li>
+                <li data-target="#masonry-carousel" data-slide-to="3"></li>
+                <li data-target="#masonry-carousel" data-slide-to="4"></li>
+                <li data-target="#masonry-carousel" data-slide-to="5"></li>
+                <li data-target="#masonry-carousel" data-slide-to="6"></li>
+                <li data-target="#masonry-carousel" data-slide-to="7"></li>
+                <li data-target="#masonry-carousel" data-slide-to="8"></li>
+                <li data-target="#masonry-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Masonry: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">CMasonry: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Masonry: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("artisan_masonry/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#masonry-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#masonry-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :artisan_masonry_id %>
+    <%= f.number_field :artisan_masonry_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :carpentry_id, "Choose your favorite Carpentry Work" %>
+    <div class="container">
+        <div id="carpentry-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carpentry-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="1"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="2"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="3"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="4"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="5"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="6"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="7"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="8"></li>
+                <li data-target="#carpentry-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Carpentry: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Carpentry: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("carpentry/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#carpentry-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carpentry-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :carpentry_id %>
+    <%= f.number_field :carpentry_id, in: 1..10, step: 1%>
+
+    <%= f.label :outdoor_lighting_id, "Choose your favorite Outdoor Lighting" %>
+    <div class="container">
+        <div id="lighting-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#lighting-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#lighting-carousel" data-slide-to="1"></li>
+                <li data-target="#lighting-carousel" data-slide-to="2"></li>
+                <li data-target="#lighting-carousel" data-slide-to="3"></li>
+                <li data-target="#lighting-carousel" data-slide-to="4"></li>
+                <li data-target="#lighting-carousel" data-slide-to="5"></li>
+                <li data-target="#lighting-carousel" data-slide-to="6"></li>
+                <li data-target="#lighting-carousel" data-slide-to="7"></li>
+                <li data-target="#lighting-carousel" data-slide-to="8"></li>
+                <li data-target="#lighting-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Lighting: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Lighting: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_lighting/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#lighting-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#lighting-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :outdoor_lighting_id %>
+    <%= f.number_field :outdoor_lighting_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :outdoor_kitchen_id, "Choose your favorite Outdoor Kitchen" %>
+    <div class="container">
+        <div id="kitchen-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#kitchen-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="1"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="2"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="3"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="4"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="5"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="6"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="7"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="8"></li>
+                <li data-target="#kitchen-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Kitchen: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Kitchen: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_kitchen/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#kitchen-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#kitchen-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :outdoor_kitchen_id %>
+    <%= f.number_field :outdoor_kitchen_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :outdoor_fireplace_id, "Choose your favorite Outdoor Fireplace" %>
+    <div class="container">
+        <div id="fireplace-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#fireplace-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="1"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="2"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="3"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="4"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="5"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="6"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="7"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="8"></li>
+                <li data-target="#fireplace-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Fireplace: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("outdoor_fireplace/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#fireplace-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#fireplace-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :outdoor_fireplace_id %>
+    <%= f.number_field :outdoor_fireplace_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :water_feature_id, "Choose your favorite Water Feature" %>
+    <div class="container">
+        <div id="water-feature-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#water-feature-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="1"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="2"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="3"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="4"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="5"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="6"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="7"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="8"></li>
+                <li data-target="#water-feature-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Water Feature: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Water Feature: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("water_feature/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#water-feature-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#water-feature-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :water_feature_id %>
+    <%= f.number_field :water_feature_id, in: 1..10, step: 1%><br>
+
+    <%= f.label :fire_pit_id, "Choose your favorite Fire Pit" %>
+    <div class="container">
+        <div id="fire-pit-carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#fire-pit-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="1"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="2"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="3"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="4"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="5"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="6"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="7"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="8"></li>
+                <li data-target="#fire-pit-carousel" data-slide-to="9"></li>
+            </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="image-number">Fireplace: Number 1</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/1") %> alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 2</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/2") %> alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 3</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/3") %> alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 4</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/4") %> alt="Fourth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 5</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/5") %> alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 6</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/6") %> alt="Sixth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 7</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/7") %> alt="Seventh slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 8</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/8") %> alt="Eighth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 9</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/9") %> alt="Ninth slide">
+        </div>
+        <div class="carousel-item">
+            <div class="image-number">Fireplace: Number 10</div>
+            <img class="d-block w-100 slide-image" src=<%= image_path("fire_pit/10") %> alt="Tenth slide">
+        </div>
+        </div>
+            <a class="carousel-control-prev" href="#fire-pit-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#fire-pit-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <%= f.label :fire_pit_id %>
+    <%= f.number_field :fire_pit_id, in: 1..10, step: 1%><br>
+
+  <%= f.submit %>
+<%end%>

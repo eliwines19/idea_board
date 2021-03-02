@@ -10,3 +10,22 @@
 //   font: 100% $font-stack;
 //   color: $primary-color;
 // }
+
+.board-form {
+    text-align: center;
+
+    input {
+        padding: 5pt;
+        margin: 10pt;
+    }
+}
+
+.slide-image {
+    height: 500pt;
+}
+
+.image-number {
+    text-align: center;
+    background-color: black;
+    color: white;
+}

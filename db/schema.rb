@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_03_01_195641) do
 
   create_table "boards", force: :cascade do |t|
     t.string "title"
-    t.integer "lanscaping_id"
+    t.integer "landscaping_id"
     t.integer "hardscaping_id"
     t.integer "custom_pool_id"
     t.integer "artisan_masonry_id"
