@@ -1,1 +1,16 @@
-<h1>All Boards</h1>
+<% if @boards.length > 0 %>
+
+    <h1>All Boards</h1>
+
+    <%# <%= @boards.each do |b| %> %>
+
+    <%# <% end %> %>
+
+<% else %>
+
+    <h1>
+        No Boards yet, create one
+        <%= link_to "here", new_board_path %>
+    </h1>
+
+<% end %>

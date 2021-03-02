@@ -16,7 +16,12 @@ class BoardsController < ApplicationController
 
         @board = Board.create(board_params)
         @board.user_id = session[:user_id]
-        redirect_to '/boards'
+
+        if @board.save! 
+            redirect_to '/boards'
+        else
+            render "new"
+        end
 
     end
 
