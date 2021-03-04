@@ -2,8 +2,8 @@ class BoardsController < ApplicationController
 
     def index
 
-        @boards = Board.all
-        
+        @boards = Board.where(user_id: current_user.id)
+
     end
 
     def new

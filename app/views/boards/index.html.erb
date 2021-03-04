@@ -1,10 +1,14 @@
-<% if @boards.length > 0 %>
+<% if @boards %>
 
-    <h1>All Boards</h1>
+    <h1>Hello, <%= current_user.username %></h1>
+    <h4>You have <%= @boards.length.to_s %> Idea Boards created!</h4>
 
-    <%# <%= @boards.each do |b| %> %>
+    <% @boards.each do |board| %>
 
-    <%# <% end %> %>
+        <h5> <%= board.title %> </h5>
+        <%= image_tag("landscaping/3.jpg") %>
+
+    <% end %>
 
 <% else %>
 
