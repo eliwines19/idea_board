@@ -1,0 +1,74 @@
+<h1>Show Page</h1>
+
+<h2><%= @board.title %></h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Favorite Photo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Landscape</th>
+            <td>
+                <%= image_tag("landscaping/" + @board.landscaping_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Hardscape</th>
+            <td>
+                <%= image_tag("hardscaping/" + @board.hardscaping_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Pool</th>
+            <td>
+                <%= image_tag("custom_pool/" + @board.custom_pool_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Masonry</th>
+            <td>
+                <%= image_tag("artisan_masonry/" + @board.artisan_masonry_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Carpentry</th>
+            <td>
+                <%= image_tag("carpentry/" + @board.carpentry_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Outdoor Lighting</th>
+            <td>
+                <%= image_tag("outdoor_lighting/" + @board.outdoor_lighting_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Outdoor Kitchen</th>
+            <td>
+                <%= image_tag("outdoor_kitchen/" + @board.outdoor_kitchen_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Outdoor Fireplace</th>
+            <td>
+                <%= image_tag("outdoor_fireplace/" + @board.outdoor_fireplace_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Water Feature</th>
+            <td>
+                <%= image_tag("water_feature/" + @board.water_feature_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Fire Pit</th>
+            <td>
+                <%= image_tag("fire_pit/" + @board.fire_pit_id.to_s + ".jpg", :class => "show-image") %>
+            </td>
+        </tr>
+    </tbody>
+</table>

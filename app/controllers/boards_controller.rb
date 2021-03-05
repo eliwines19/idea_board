@@ -6,6 +6,12 @@ class BoardsController < ApplicationController
 
     end
 
+    def show
+
+        @board = Board.find_by(id: params[:id])
+
+    end
+
     def new
 
         @board = Board.new
