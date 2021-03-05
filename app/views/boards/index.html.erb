@@ -1,14 +1,25 @@
-<% if @boards %>
+<% if @boards.length > 0 %>
 
     <h1>Hello, <%= current_user.username %></h1>
-    <h4>You have <%= @boards.length.to_s %> Idea Boards created!</h4>
 
-    <% @boards.each do |board| %>
-
-        <h5> <%= board.title %> </h5>
-        <%= image_tag("landscaping/3.jpg") %>
-
+    <% if @boards.length === 1 %>
+        <h4>You have 1 Idea Board!</h4>
+    <% else %>
+        <h4>You have <%= @boards.length.to_s %> Idea Boards!</h4>
     <% end %>
+
+        <% @boards.each do |b| %>
+
+            <a href="boards/<%= b.id %>">
+                <div class="card" style="width:30rem">
+                        <%= image_tag("landscaping/" + b.landscaping_id.to_s + ".jpg", :class => "card-img-top") %>
+                        <div class="card-body">
+                            <h5 class="card-title"><%= b.title %></h5>
+                        </div>
+                </div>
+            </a>
+
+        <% end %>
 
 <% else %>
 
