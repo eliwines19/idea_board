@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
 
     def index
 
-        @boards = Board.where(user_id: current_user.id)
+        @boards = Board.where(user_id: current_user.id).reverse
 
     end
 

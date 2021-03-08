@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
 
       session[:user_id] = @user.id
-      redirect_to '/welcome'
+      redirect_to '/boards'
     
     else
     

@@ -2,10 +2,10 @@
 
     <h1>Board Selection</h1>
 
-    <h4>
-        Here you will select your favorite image for each category,
-        place the number of your favorite image in the box below and submit when completed.
-    </h4>
+    <h6>1. Give your Idea Board a title</h6>
+    <h6>2. Browse each slideshow for your favorite design in each category</h6>
+    <h6>3. Provide the ID of your favorite design in the box below the slideshow</h6>
+    <h6>4. Click "Create My Board!" when complete</h6>
 
 </div>
 
@@ -82,7 +82,7 @@
         </div>
     </div>
 
-    <%= f.label :landscaping_id %>
+    <%= f.label :landscaping_id, "Landscape ID:" %>
     <%= f.number_field :landscaping_id, in: 1..10, step: 1%><br>
 
     <%= f.label :hardscaping_id, "Choose your favorite hardscape" %>
@@ -153,7 +153,7 @@
         </div>
     </div>
 
-    <%= f.label :hardscaping_id %>
+    <%= f.label :hardscaping_id, "Hardscape ID:" %>
     <%= f.number_field :hardscaping_id, in: 1..10, step: 1%><br>
 
     <%= f.label :custom_pool_id, "Choose your favorite custom pool" %>
@@ -224,7 +224,7 @@
         </div>
     </div>
 
-    <%= f.label :custom_pool_id %>
+    <%= f.label :custom_pool_id, "Pool ID:" %>
     <%= f.number_field :custom_pool_id, in: 1..10, step: 1%><br>
 
     <%= f.label :artisan_masonry_id, "Choose your favorite Masonry Work" %>
@@ -295,7 +295,7 @@
         </div>
     </div>
 
-    <%= f.label :artisan_masonry_id %>
+    <%= f.label :artisan_masonry_id, "Masonry ID:" %>
     <%= f.number_field :artisan_masonry_id, in: 1..10, step: 1%><br>
 
     <%= f.label :carpentry_id, "Choose your favorite Carpentry Work" %>
@@ -366,7 +366,7 @@
         </div>
     </div>
 
-    <%= f.label :carpentry_id %>
+    <%= f.label :carpentry_id, "Carpentry ID:" %>
     <%= f.number_field :carpentry_id, in: 1..10, step: 1%><br>
 
     <%= f.label :outdoor_lighting_id, "Choose your favorite Outdoor Lighting" %>
@@ -437,7 +437,7 @@
         </div>
     </div>
 
-    <%= f.label :outdoor_lighting_id %>
+    <%= f.label :outdoor_lighting_id, "Lighting ID:" %>
     <%= f.number_field :outdoor_lighting_id, in: 1..10, step: 1%><br>
 
     <%= f.label :outdoor_kitchen_id, "Choose your favorite Outdoor Kitchen" %>
@@ -508,7 +508,7 @@
         </div>
     </div>
 
-    <%= f.label :outdoor_kitchen_id %>
+    <%= f.label :outdoor_kitchen_id, "Kitchen ID:" %>
     <%= f.number_field :outdoor_kitchen_id, in: 1..10, step: 1%><br>
 
     <%= f.label :outdoor_fireplace_id, "Choose your favorite Outdoor Fireplace" %>
@@ -579,7 +579,7 @@
         </div>
     </div>
 
-    <%= f.label :outdoor_fireplace_id %>
+    <%= f.label :outdoor_fireplace_id, "Fireplace ID:" %>
     <%= f.number_field :outdoor_fireplace_id, in: 1..10, step: 1%><br>
 
     <%= f.label :water_feature_id, "Choose your favorite Water Feature" %>
@@ -650,7 +650,7 @@
         </div>
     </div>
 
-    <%= f.label :water_feature_id %>
+    <%= f.label :water_feature_id, "Water Feature ID:" %>
     <%= f.number_field :water_feature_id, in: 1..10, step: 1%><br>
 
     <%= f.label :fire_pit_id, "Choose your favorite Fire Pit" %>
@@ -721,8 +721,8 @@
         </div>
     </div>
 
-    <%= f.label :fire_pit_id %>
+    <%= f.label :fire_pit_id, "Fire Pit ID:" %>
     <%= f.number_field :fire_pit_id, in: 1..10, step: 1%><br>
 
-  <%= f.submit %>
+  <%= f.submit "Create My Board!" %>
 <%end%>

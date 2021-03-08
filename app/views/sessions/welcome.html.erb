@@ -3,10 +3,6 @@
 <% if logged_in? %>
 
     <h2>You are logged in, <%= current_user.username %> </h2>
-    <%= button_to "Logout", "/logout", method: :post %>
-
-    <%= button_to "New Board", new_board_path, method: :get %>
-    <%= button_to "All Boards", "/boards", method: :get %>
 
 <% else %>
 

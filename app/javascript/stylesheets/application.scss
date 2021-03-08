@@ -11,6 +11,22 @@
 //   color: $primary-color;
 // }
 
+.nav {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.nav:first-child {
+    color: blue;
+}
+
+.nav a {
+    margin-left: 2rem;
+    color: white;
+}
+
 .board-form {
     text-align: center;
 
