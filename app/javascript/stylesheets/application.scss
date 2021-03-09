@@ -37,7 +37,7 @@
 }
 
 .slide-image {
-    height: 500pt;
+    height: 600pt;
 }
 
 .image-number {
@@ -74,6 +74,10 @@
 
     .show-image {
         width: 100%;
+    }
+
+    .slide-image {
+        height: auto;
     }
 
 }
