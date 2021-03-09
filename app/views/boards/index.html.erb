@@ -13,7 +13,7 @@
             <% @boards.each do |b| %>
 
                 <a href="boards/<%= b.id %>">
-                    <div class="card" style="width:50rem">
+                    <div class="card">
                             <%= image_tag("landscaping/" + b.landscaping_id.to_s + ".jpg", :class => "card-img-top") %>
                             <div class="card-body">
                                 <h5 class="card-title"><%= b.title %></h5>

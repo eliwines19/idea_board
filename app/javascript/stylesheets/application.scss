@@ -54,6 +54,26 @@
     background-color: green;
 }
 
+.card {
+    width: 50rem;
+}
+
 .show-image {
     width: 50rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .nav a {
+        margin-left: 0.5rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .show-image {
+        width: 100%;
+    }
+
 }
